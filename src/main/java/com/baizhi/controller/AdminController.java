@@ -19,6 +19,7 @@ public class AdminController {
        Admin wjn = adminService.login(username, password);
        if (wjn!=null){
            session.setAttribute("admin",wjn);
+           System.out.println(username);
            return "redirect:/emp/findAll";
        }
        else return "login";
